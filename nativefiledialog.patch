@@ -1,0 +1,44 @@
+diff --git a/src/include/nfd.h b/src/include/nfd.h
+index 74c9274..3ed6c0b 100644
+--- a/src/include/nfd.h
++++ b/src/include/nfd.h
+@@ -10,6 +10,12 @@
+ #ifndef _NFD_H
+ #define _NFD_H
+ 
++#if defined(NFD_BUILD_AS_DLL)
++#define NFD_API __declspec(dllexport)
++#else
++#define NFD_API extern
++#endif
++
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
+@@ -36,22 +42,26 @@ typedef enum {
+ /* nfd_<targetplatform>.c */
+ 
+ /* single file open dialog */    
++NFD_API
+ nfdresult_t NFD_OpenDialog( const nfdchar_t *filterList,
+                             const nfdchar_t *defaultPath,
+                             nfdchar_t **outPath );
+ 
+ /* multiple file open dialog */    
++NFD_API
+ nfdresult_t NFD_OpenDialogMultiple( const nfdchar_t *filterList,
+                                     const nfdchar_t *defaultPath,
+                                     nfdpathset_t *outPaths );
+ 
+ /* save dialog */
++NFD_API
+ nfdresult_t NFD_SaveDialog( const nfdchar_t *filterList,
+                             const nfdchar_t *defaultPath,
+                             nfdchar_t **outPath );
+ 
+ 
+ /* select folder dialog */
++NFD_API
+ nfdresult_t NFD_PickFolder( const nfdchar_t *defaultPath,
+                             nfdchar_t **outPath);
+ 
