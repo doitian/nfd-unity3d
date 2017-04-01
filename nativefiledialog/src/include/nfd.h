@@ -68,12 +68,16 @@ nfdresult_t NFD_PickFolder( const nfdchar_t *defaultPath,
 /* nfd_common.c */
 
 /* get last error -- set when nfdresult_t returns NFD_ERROR */
+NFD_API
 const char *NFD_GetError( void );
 /* get the number of entries stored in pathSet */
+NFD_API
 size_t      NFD_PathSet_GetCount( const nfdpathset_t *pathSet );
 /* Get the UTF-8 path at offset index */
+NFD_API
 nfdchar_t  *NFD_PathSet_GetPath( const nfdpathset_t *pathSet, size_t index );
 /* Free the pathSet */    
+NFD_API
 void        NFD_PathSet_Free( nfdpathset_t *pathSet );
 
 
