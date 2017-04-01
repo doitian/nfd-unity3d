@@ -28,6 +28,7 @@ elseif(UNIX)
   add_definitions(${GTK3_CFLAGS_OTHER})
   link_libraries(${GTK3_LIBRARIES})
 elseif(WIN32)
+  add_definitions(-DNFD_BUILD_AS_DLL)
   set(NFD_SRC nativefiledialog/src/nfd_win.cpp ${NFD_SRC})
 endif(APPLE)
 
