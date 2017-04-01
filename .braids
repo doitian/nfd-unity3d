@@ -1,0 +1,9 @@
+{
+  "nativefiledialog": {
+    "url": "https://github.com/mlabbe/nativefiledialog.git",
+    "remote": "master/braid/nativefiledialog",
+    "branch": "master",
+    "squashed": true,
+    "revision": "5cfe5002eb0fac1e49777a17dec70134147931e2"
+  }
+}
