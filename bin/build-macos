@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -u
+set -e
+[ -n "${DEBUG:-}" ] && set -x
+
+mkdir -p build/macos
+pushd build/macos
+cmake -DCMAKE_BUILD_TYPE=Release ../..
+make all
+popd
+mkdir -p Assets/nfd/Plugins/MacOS
+cp -r build/macos/nfd.bundle Assets/nfd/Plugins/MacOS/
