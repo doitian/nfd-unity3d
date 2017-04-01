@@ -667,7 +667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileDialogType: 1
   defaultPath: 
-  filterList: jpg,png;psd
+  filterList: 
   allowOpenMultiple: 0
   onResult:
     m_PersistentCalls:
