@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -u
+set -e
+[ -n "${DEBUG:-}" ] && set -x
+
+mkdir -p build/x86
+pushd build/x86
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_FLAGS=-m64 ../..
+make all
+popd
+mkdir -p Assets/nfd/Plugins/x86_64
+cp -f build/x86/libnfd.so Assets/nfd/Plugins/x86_64/
