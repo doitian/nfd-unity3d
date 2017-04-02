@@ -13,7 +13,7 @@ namespace nfd
 	}
 
 	[Serializable]
-	public class FileDialogResultEvent : UnityEvent<NfdResult, string, string[]> {}
+	public class FileDialogResultEvent : UnityEvent<NfdResult, string, string[]> { }
 
 	public class FileDialog : MonoBehaviour
 	{
@@ -31,7 +31,7 @@ namespace nfd
 			string[] outPaths = null;
 			NfdResult result = NfdResult.NFD_CANCEL;
 
-			switch(fileDialogType) {
+			switch (fileDialogType) {
 				case FileDialogType.Open:
 					if (!allowOpenMultiple) {
 						result = NativeFileDialog.OpenDialog(filterList, defaultPath, out outPath);
