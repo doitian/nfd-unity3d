@@ -109,7 +109,7 @@ namespace nfd
 				NFDi_Free(outPathPtr);
 			}
 
-			if (defaultPathPtr != null) {
+			if (defaultPath != null) {
 				Marshal.FreeHGlobal(defaultPathPtr);
 			}
 
