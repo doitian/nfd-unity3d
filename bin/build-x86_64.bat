@@ -5,7 +5,7 @@ if not exist build\x86_64 (
     md build\x86_64
     cd build\x86_64
     if "%1" == "" (
-        cmake -G "Visual Studio 11 2012" ..\..
+        cmake -G "Visual Studio 11 2012 Win64" ..\..
     ) else (
         cmake -G "%1" ..\..
     )
