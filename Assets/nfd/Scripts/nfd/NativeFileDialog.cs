@@ -34,7 +34,7 @@ namespace nfd
 			if (filterList != null) {
 				Marshal.FreeHGlobal(filterListPtr);
 			}
-			if (filterList != null) {
+			if (defaultPath != null) {
 				Marshal.FreeHGlobal(defaultPathPtr);
 			}
 
@@ -64,7 +64,7 @@ namespace nfd
 			if (filterList != null) {
 				Marshal.FreeHGlobal(filterListPtr);
 			}
-			if (filterList != null) {
+			if (defaultPath != null) {
 				Marshal.FreeHGlobal(defaultPathPtr);
 			}
 
@@ -89,7 +89,7 @@ namespace nfd
 			if (filterList != null) {
 				Marshal.FreeHGlobal(filterListPtr);
 			}
-			if (filterList != null) {
+			if (defaultPath != null) {
 				Marshal.FreeHGlobal(defaultPathPtr);
 			}
 
